@@ -1,0 +1,55 @@
+﻿@model List<BiodataCalonKaryawan.Models.Pelamar>
+
+@{
+}
+
+<h1>Pelamar</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Posisi</th>
+            <th>IdNumber</th>
+            <th>TempatLahir</th>
+            <th>TanggalLahir</th>
+            <th>Agama</th>
+            <th>GolDarah</th>
+            <th>Status</th>
+            <th>AlamatKTP</th>
+            <th>AlamatDomisili</th>
+            <th>Email</th>
+            <th>TelpNo</th>
+            <th>Gender</th>
+            <th>EmergencyNo</th>
+            <th>EmergencyName</th>
+            <th>PendapatanHarapan</th>
+            <th>BersediaDitempatkan</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pelamar in Model)
+        {
+            <tr>
+                <td>@pelamar.Name</td>
+                <td>@pelamar.Posisi</td>
+                <td>@pelamar.IdNumber</td>
+                <td>@pelamar.TempatLahir</td>
+                <td>@pelamar.TanggalLahir</td>
+                <td>@pelamar.Agama</td>
+                <td>@pelamar.GolDarah</td>
+                <td>@pelamar.Status</td>
+                <td>@pelamar.AlamatKTP</td>
+                <td>@pelamar.AlamatDomisili</td>
+                <td>@pelamar.Email</td>
+                <td>@pelamar.TelpNo</td>
+                <td>@pelamar.Gender</td>
+                <td>@pelamar.EmergencyNo</td>
+                <td>@pelamar.EmergencyName</td>
+                <td>@pelamar.PendapatanHarapan</td>
+                <td>@pelamar.BersediaDitempatkan</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

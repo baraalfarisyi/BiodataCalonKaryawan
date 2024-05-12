@@ -1,0 +1,189 @@
+﻿@using BiodataCalonKaryawan.Models.enums
+@model BiodataCalonKaryawan.Models.ViewModels.InputPelamar
+@{
+    ViewData["Title"] = "Insert Pelamar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Insert Pelamar Form</h4>
+<hr />
+
+<div class="text-danger m-2">
+    @ViewBag.Message
+</div>
+
+<div class="row">
+    <div class="col-md-6 m-1">
+        <form asp-controller="Pelamar" asp-action="Insert" method="post">
+            <div class="form-group">
+                <label asp-for="Posisi" class="control-label"></label>
+                <input asp-for="Posisi" class="form-control" />
+                <span asp-validation-for="Posisi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdNumber" class="control-label"></label>
+                <input asp-for="IdNumber" class="form-control" />
+                <span asp-validation-for="IdNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TempatLahir" class="control-label"></label>
+                <input asp-for="TempatLahir" class="form-control" />
+                <span asp-validation-for="TempatLahir" class="text-danger"></span>
+                <label asp-for="TanggalLahir" class="control-label"></label>
+                <input type="date" asp-for="TanggalLahir" class="form-control" />
+                <span asp-validation-for="TanggalLahir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <select asp-for="Gender" asp-items="Html.GetEnumSelectList<Gender>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="Gender" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Agama" class="control-label"></label>
+                <input asp-for="Agama" class="form-control" />
+                <span asp-validation-for="Agama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GolDarah" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <select asp-for="GolDarah" asp-items="Html.GetEnumSelectList<GolDarah>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="GolDarah" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <select asp-for="Status" asp-items="Html.GetEnumSelectList<Status>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="Status" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlamatKTP" class="control-label"></label>
+                <input asp-for="AlamatKTP" class="form-control" />
+                <span asp-validation-for="AlamatKTP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlamatDomisili" class="control-label"></label>
+                <input asp-for="AlamatDomisili" class="form-control" />
+                <span asp-validation-for="AlamatDomisili" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelpNo" class="control-label"></label>
+                <input asp-for="TelpNo" class="form-control" />
+                <span asp-validation-for="TelpNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmergencyName" class="control-label"></label>
+                <input asp-for="EmergencyName" class="form-control" />
+                <span asp-validation-for="EmergencyName" class="text-danger"></span>
+                <label asp-for="EmergencyNo" class="control-label"></label>
+                <input asp-for="EmergencyNo" class="form-control" />
+                <span asp-validation-for="EmergencyNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputPendidikanTerakhir.Jenjang" class="control-label"></label>
+                <input asp-for="InputPendidikanTerakhir.Jenjang" class="form-control" />
+                <span asp-validation-for="InputPendidikanTerakhir.Jenjang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputPendidikanTerakhir.NamaInstitusi" class="control-label"></label>
+                <input asp-for="InputPendidikanTerakhir.NamaInstitusi" class="form-control" />
+                <span asp-validation-for="InputPendidikanTerakhir.NamaInstitusi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputPendidikanTerakhir.Jurusan" class="control-label"></label>
+                <input asp-for="InputPendidikanTerakhir.Jurusan" class="form-control" />
+                <span asp-validation-for="InputPendidikanTerakhir.Jurusan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputPendidikanTerakhir.TahunLulus" class="control-label"></label>
+                <input type="date" asp-for="InputPendidikanTerakhir.TahunLulus" class="form-control" />
+                <span asp-validation-for="InputPendidikanTerakhir.TahunLulus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputPendidikanTerakhir.IPK" class="control-label"></label>
+                <input asp-for="InputPendidikanTerakhir.IPK" class="form-control" />
+                <span asp-validation-for="InputPendidikanTerakhir.IPK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputRiwayatPelatihan.NamaKursus" class="control-label"></label>
+                <input asp-for="InputRiwayatPelatihan.NamaKursus" class="form-control" />
+                <span asp-validation-for="InputRiwayatPelatihan.NamaKursus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputRiwayatPelatihan.Sertifikat" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <select asp-for="InputRiwayatPelatihan.Sertifikat" asp-items="Html.GetEnumSelectList<Sertifikat>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="InputRiwayatPelatihan.Sertifikat" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputRiwayatPelatihan.Tahun" class="control-label"></label>
+                <input type="date" asp-for="InputRiwayatPelatihan.Tahun" class="form-control" />
+                <span asp-validation-for="InputRiwayatPelatihan.Tahun" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputRiwayatPekerjaan.NamaPerusahan" class="control-label"></label>
+                <input asp-for="InputRiwayatPekerjaan.NamaPerusahan" class="form-control" />
+                <span asp-validation-for="InputRiwayatPekerjaan.NamaPerusahan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputRiwayatPekerjaan.Posisi" class="control-label"></label>
+                <input asp-for="InputRiwayatPekerjaan.Posisi" class="form-control" />
+                <span asp-validation-for="InputRiwayatPekerjaan.Posisi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputRiwayatPekerjaan.PendapatanTerakhir" class="control-label"></label>
+                <input asp-for="InputRiwayatPekerjaan.PendapatanTerakhir" class="form-control" />
+                <span asp-validation-for="InputRiwayatPekerjaan.PendapatanTerakhir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InputRiwayatPekerjaan.TahunMasuk" class="control-label"></label>
+                <input type="date" asp-for="InputRiwayatPekerjaan.TahunMasuk" class="form-control" />
+                <span asp-validation-for="InputRiwayatPekerjaan.TahunMasuk" class="text-danger"></span>
+                <label asp-for="InputRiwayatPekerjaan.TahunKeluar" class="control-label"></label>
+                <input type="date" asp-for="InputRiwayatPekerjaan.TahunKeluar" class="form-control" />
+                <span asp-validation-for="InputRiwayatPekerjaan.TahunKeluar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BersediaDitempatkan" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <select asp-for="BersediaDitempatkan" asp-items="Html.GetEnumSelectList<BersediaDitempatkan>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="BersediaDitempatkan" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="PendapatanHarapan" class="control-label"></label>
+                <input asp-for="PendapatanHarapan" class="form-control" />
+                <span asp-validation-for="PendapatanHarapan" class="text-danger"></span>
+            </div>
+            <div class="form-group row mt-2">
+                <div class="d-grid col-md-6">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
